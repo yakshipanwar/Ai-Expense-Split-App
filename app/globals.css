@@ -111,12 +111,32 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
 }
-
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border outline-ring/50 transition-colors duration-200;
   }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 text-foreground antialiased;
   }
+
+  h1, h2, h3, h4 {
+    @apply font-semibold tracking-tight text-green-500;
+  }
+
+  input, textarea, select {
+    @apply bg-muted/20 border border-border rounded-md focus:ring-2 focus:ring-teal-500 focus:outline-none;
+  }
+
+  button {
+    @apply transition-all duration-200;
+  }
+}
+
+@utility gradient {
+  @apply bg-gradient-to-r from-emerald-500 to-teal-500;
+}
+
+@utility gradient-title {
+  @apply bg-gradient-to-r from-emerald-500 to-green-500 font-extrabold tracking-tighter text-transparent bg-clip-text pb-2 pr-2;
 }

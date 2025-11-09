@@ -21,11 +21,11 @@ const Header = () => {
   const path =  usePathname();
 
   return (
-    <header className="fixed top-0 w-full border-b bg-white/95 backdrop-blur z-50 supports-backdrop-filter:bg-white/60">
+    <header className="fixed top-0 w-full bg-white border-b border-gray-200 shadow-sm z-50">
       <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
       <Link href="/" className="flex items-center gap-2">
-      <Image src={"/logos/next.svg"}
-      alt="Logo" width={200} height={60} className="h-11 w-auto object-contain">
+      <Image src={"/logos/Money-Divvy.png"}
+      alt="Logo" width={800} height={100} className="h-11 w-auto object-contain">
       </Image>
       </Link>
       
